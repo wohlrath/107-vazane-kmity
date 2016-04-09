@@ -18,14 +18,11 @@
 \usepackage{url}
 \usepackage{float}
 
-\graphicspath{graficos}
+\newfloat{graph}{htbp}{grp}
+\floatname{graph}{Graf}
 
-\newfloat{customgraph}{Hn}{grp}
-\floatname{customgraph}{Graf}
-
-\floatstyle{plaintop}
-\newfloat{customtables}{Hn}{tbl}
-\floatname{customtables}{Tabulka}
+\newfloat{tabulka}{htbp}{tbl}
+\floatname{tabulka}{Tabulka}
 
 \pagestyle{fancy}
 \lhead{Praktikum I - (VII) Studium kmitů vázaných oscilátorů}
@@ -45,9 +42,9 @@
 \item Změřte dobu kmitu $T_0$ dvou stejných nevázaných fyzických kyvadel.
 \item Změřte doby kmitů $T_i$ dvou stejných fyzických kyvadel vázaných slabou pružnou vazbou vypouštěných z klidu při počátečních podmínkách
 \begin{enumerate}
-\item $y_1=y_2=B$ \ldots doba kmitu $T_1$
-\item $y_1=-y_2=B$ \ldots doba kmitu $T_2$
-\item $y_1=0, y_2=B$
+\item $y_1=y_2=A$ \ldots doba kmitu $T_1$
+\item $y_1=-y_2=A$ \ldots doba kmitu $T_2$
+\item $y_1=0, y_2=A$
 	\begin{enumerate}
 	\item doba kmitu $T3$
 	\item doba $T_S/2$, za kterou dojde k maximální výměně energie mezi kyvadly
