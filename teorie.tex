@@ -29,19 +29,19 @@ kde $a_1$, $b_1$, $a_2$ a $b_2$ jsou integrační konstanty, které určíme z p
  \omega_2 &= \sqrt{\frac{D+2D^{\ast}}{I}} \,,
 \end{split}
 \end{align}
-kde $I$ je moment setrvačnosti kyvadla, $D$ je direkční moment kyvadla a $D^{\ast}$ je direkční moment pružiny. Žádnou z těchto veličin však nebudeme měřit a úhlové rychlost $\omega _1$ a $\omega _2$ určíme jinak.
+kde $I$ je moment setrvačnosti kyvadla, $D$ je direkční moment kyvadla a $D^{\ast}$ je direkční moment pružiny. Žádnou z těchto veličin však nebudeme měřit a úhlové rychlosti $\omega _1$ a $\omega _2$ změříme přímo při vhodně zvolených počátečních podmínkách.
 
 Pro různé počáteční podmínky vychází:
 \begin{enumerate}
-\item Pro $\varphi _1 (0) = \varphi _2 (0) = A$, $\dot{\varphi_1}(0)=\dot{\varphi_2}(0)=0$
+\item Pro $\varphi _1 (0) = \varphi _2 (0) = A$, $\dot{\varphi_1}(0)=\dot{\varphi_2}(0)=0$ dostáváme
 \begin{equation} \label{eq::philist1}
-\varphi _1 = \varphi _2 = A \cos(\omega _1 t)
+\varphi _1 = \varphi _2 = A \cos(\omega _1 t)\,.
 \end{equation}
-\item Pro $\varphi _1 (0) = - \varphi _2 (0) = A$, $\dot{\varphi_1}(0)=\dot{\varphi_2}(0)=0$
+\item Pro $\varphi _1 (0) = - \varphi _2 (0) = A$, $\dot{\varphi_1}(0)=\dot{\varphi_2}(0)=0$ dostáváme
 \begin{equation} \label{eq::philist2}
-\varphi _1 = - \varphi _2 = A \cos(\omega _2 t)
+\varphi _1 = - \varphi _2 = A \cos(\omega _2 t) \,.
 \end{equation}
-\item Pro $\varphi _1 (0) = 0$, $\varphi _2 (0) = A$, $\dot{\varphi_1}(0)=\dot{\varphi_2}(0)=0$
+\item Pro $\varphi _1 (0) = 0$, $\varphi _2 (0) = A$, $\dot{\varphi_1}(0)=\dot{\varphi_2}(0)=0$ dostáváme
 \begin{align}
 \label{eq::philist3}
 \begin{split}
@@ -72,6 +72,8 @@ Dále zavedeme dobu $T_S$ jako polovinu periody odpovídající $\omega_4$. Plat
  T_3 \omega_3 &= 2\pi & T_S \omega_4 &=\pi
 \end{align}
 
+Standardní odchylku úhlové rychlosti počítáme vždy jako $\sigma_\omega=\omega \cdot \sigma_T / T$.
+
 S nahlédnutím do \eqref{eq::philist3} je $T_S$ zřejmě doba mezi dvěma časy, kdy je amplituda kyvadla nulová (viz~obrázek~\ref{obr::tretipripad}).
 
 \begin{figure}[htbp]
@@ -88,5 +90,11 @@ Stupeň vazby $\kappa$ je definován jako \cite{ZFP}
 
 S využitím \eqref{eq::omegadirekcni} můžeme \eqref{eq::kappadirekcni} upravit na
 \begin{equation}
-\kappa = \frac{\omega_2^2-\omega_1^2}{\omega_2^2+\omega_1^2}
+\kappa = \frac{\omega_2^2-\omega_1^2}{\omega_2^2+\omega_1^2} \,.
 \end{equation}
+
+Standardní odchylku stupně vazby $\sigma_\kappa$ v závislosti na odchylkách $\sigma _{\omega_1}$ a $\sigma _{\omega_2}$ určíme jako
+\begin{equation} \label{eq::odchylkakappa}
+\sigma _\kappa = \sqrt{ \left( \frac{\partial \kappa}{\partial \omega_1} \right) ^2 \cdot \sigma_{\omega_1}^2    +   \left(  \frac{\partial \kappa}{\partial \omega_2}     \right)^2 \cdot \sigma_{\omega_2}^2    } = \frac{4 \omega_1^2 \omega_2^2}{ \left( \omega_1^2+\omega_2^2 \right) ^2} \sqrt{ \left( \frac{\sigma _{\omega_1}}{\omega_1}      \right)^2    +      \left( \frac{\sigma _{\omega_2}}{\omega_2}      \right)^2                   }
+\end{equation}
+
