@@ -10,3 +10,26 @@ Vzhledem k tomu, že naměřené $\omega_4$ velmi přesně odpovídá naměřen�
 Nemůžeme ale vyloučit, že se o hrubou chybu nejedná a pohyb kyvadel našemu modelu neodpovídá.
 V každém případě je měření neprůkazné a mělo by se zopakovat.
 
+Pokud upevníme pružinu s tuhostí $k$ ve vzdálenosti $l$ od upevnění kyvadla, působí při malých výchylkách (tj.~$\sin (\varphi) \approx \varphi$) na kyvadlo silou
+\begin{equation}
+F=-k \cdot l \cdot \varphi
+\end{equation}
+a působí momentem síly $M = F \cdot l$
+\begin{equation}
+M = -k \cdot l^2 \cdot \varphi  \,.
+\end{equation}
+
+Porovnáním s definicí direkčního momentu
+\begin{equation}
+M = -D \cdot \varphi
+\end{equation}
+snadno nahlédneme, že pro direkční moment pružiny $D^{\ast}$ platí
+\begin{equation}
+D^{\ast} = -k \cdot l^2 \,.
+\end{equation}
+
+Dosazením do \eqref{eq::kappadirekcni} dostáváme pro slabé vazby a krátké vzdálenosti $l$ (tj.~$D^{\ast} \ll D$)
+\begin{equation}
+\kappa = a \cdot l^2 \,,
+\end{equation}
+kde $a = D^{\ast}/D$. Proto jsme v grafu \ref{grp::kappanal} fitovali závislost funkcí $\kappa(l)=a \cdot l^2$. Všechny hodnoty leží velmi přesně na této křivce.
