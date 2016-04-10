@@ -1,16 +1,19 @@
-set terminal epslatex size 18cm,12cm color colortext
-set output '../graf1.tex'
+set terminal epslatex size 18cm,12cm
+set output 'graf.tex'
 
 set title
-set xlabel ''
-set ylabel ''
+set xlabel '$l$ (\si{cm})'
+set ylabel '$\kappa$'
 set grid x,y
-set yrange[0:10]
-set xrange[0:10]
+set yrange[0:0.1]
+set xrange[0:35]
 
 
+f(x) = a*x+b
+fit f(x) 'kappa.dat' u 1:2 via a,b 
 
-plot x
+
+plot 'kappa.dat' lw 3 with xyerror notitle
 
 
 
